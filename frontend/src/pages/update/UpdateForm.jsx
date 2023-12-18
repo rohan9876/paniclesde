@@ -23,7 +23,7 @@ const UpdateForm = ({ employee, onClose }) => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:8080/employees/update/${employee._id}`,
+        `https://panicle.onrender.com/employees/update/${employee._id}`,
         updatedEmployee
       );
 

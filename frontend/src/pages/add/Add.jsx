@@ -31,7 +31,7 @@ export default function Add() {
                 return;
             }
     
-            const response = await axios.post("http://localhost:8080/employees/create/", formData);
+            const response = await axios.post("https://panicle.onrender.com/employees/create/", formData);
             console.log("Success:", response.data);
             alert("Employee added sucessfully");
             setFormData({
