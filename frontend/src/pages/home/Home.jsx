@@ -20,7 +20,7 @@ const Home = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/employees/read");
+      const response = await axios.get("https://panicle.onrender.com/employees/read");
       setEmployees(response.data);
       setLoading(false);
       renderChart(response.data);
@@ -36,7 +36,7 @@ const Home = () => {
 
   const handleDeleteClick = async (employeeId) => {
     try {
-      await axios.delete(`http://localhost:8080/employees/delete/${employeeId}`);
+      await axios.delete(`https://panicle.onrender.com/employees/delete/${employeeId}`);
       const deletedEmp = employees.find((employee) => employee._id === employeeId);
       setDeletedEmployee(deletedEmp);
       fetchData();
